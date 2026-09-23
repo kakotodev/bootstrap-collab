@@ -50,7 +50,7 @@ GUIDE-STYLE.md        Charte graphique et composants à utiliser
 - [x] Socle commun : Bootstrap par CDN, barre de navigation avec menu burger, pied de page, thème, favicon, balises SEO
 - [ ] Accueil
 - [ ] Contact (formulaire fonctionnel et conforme au RGPD)
-- [ ] Destinations (filtres, fiches détaillées)
+- [x] Destinations (filtres, fiches détaillées)
 - [ ] À propos
 - [ ] Pages Mentions légales et Politique de confidentialité
 - [ ] Vraies photos (hero, destinations, équipe)

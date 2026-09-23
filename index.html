@@ -56,51 +56,75 @@
     <!-- Contenu principal -->
     <main id="contenu">
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Explorez le monde avec nous</h1>
-                <p class="hero-subtitle">Découvrez des destinations extraordinaires et créez des souvenirs inoubliables
-                </p>
-                <button class="cta-button">Découvrir nos voyages</button>
+    <!-- Hero : photo de fond (définie dans style.css, classe .hero), boutons empilés sur mobile.
+         data-bs-theme="dark" : contour de focus en blanc, visible sur la photo sombre -->
+    <section class="hero text-white text-center py-5" data-bs-theme="dark">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Explorez le monde avec nous</h1>
+            <p class="lead mb-4">Découvrez des destinations extraordinaires et créez des souvenirs inoubliables.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="destinations.html" class="btn btn-primary btn-lg">Découvrir nos voyages</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">Nous contacter</a>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <!-- Services : 1 carte par ligne sur mobile, 3 à partir de 768px -->
+    <section class="py-5 bg-white">
         <div class="container">
-            <h2 class="section-title">Nos services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✈️</div>
-                    <h3 class="service-title">Voyages organisés</h3>
-                    <p class="service-description">Des circuits complets avec guide professionnel</p>
+            <h2 class="fw-bold text-center mb-5">Nos services</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 text-center p-4">
+                        <i class="bi bi-airplane fs-1 text-primary" aria-hidden="true"></i>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Voyages organisés</h3>
+                            <p class="card-text text-body-secondary">Des circuits complets avec guide professionnel.</p>
+                        </div>
+                    </article>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏨</div>
-                    <h3 class="service-title">Réservations</h3>
-                    <p class="service-description">Hôtels et hébergements sélectionnés</p>
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 text-center p-4">
+                        <i class="bi bi-building fs-1 text-primary" aria-hidden="true"></i>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Réservations</h3>
+                            <p class="card-text text-body-secondary">Hôtels et hébergements sélectionnés.</p>
+                        </div>
+                    </article>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🎒</div>
-                    <h3 class="service-title">Voyages sur mesure</h3>
-                    <p class="service-description">Des expériences personnalisées selon vos envies</p>
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 text-center p-4">
+                        <i class="bi bi-backpack fs-1 text-primary" aria-hidden="true"></i>
+                        <div class="card-body">
+                            <h3 class="card-title h5">Voyages sur mesure</h3>
+                            <p class="card-text text-body-secondary">Des expériences personnalisées selon vos envies.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <!-- Témoignages : 1 par ligne sur mobile, 2 à partir de 768px -->
+    <section class="py-5 bg-body-tertiary">
         <div class="container">
-            <h2 class="section-title">Ils nous font confiance</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Un voyage fantastique en Asie ! L'équipe a été aux petits soins."</p>
-                    <p class="testimonial-author">- Marie D.</p>
+            <h2 class="fw-bold text-center mb-5">Ils nous font confiance</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <figure class="card h-100 shadow-sm border-0 p-4 mb-0">
+                        <blockquote class="blockquote mb-3">
+                            <p>«&nbsp;Un voyage fantastique en Asie&nbsp;! L'équipe a été aux petits soins.&nbsp;»</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer text-body-secondary mb-0">Marie D., <cite>circuit Japon, avril 2025</cite></figcaption>
+                    </figure>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Service impeccable, je recommande vivement !"</p>
-                    <p class="testimonial-author">- Pierre L.</p>
+                <div class="col">
+                    <figure class="card h-100 shadow-sm border-0 p-4 mb-0">
+                        <blockquote class="blockquote mb-3">
+                            <p>«&nbsp;Service impeccable, je recommande vivement&nbsp;!&nbsp;»</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer text-body-secondary mb-0">Pierre L., <cite>safari au Kenya, août 2025</cite></figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
