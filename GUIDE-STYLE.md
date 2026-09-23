@@ -43,6 +43,7 @@ Objectif : quelle que soit la personne qui construit une page, toutes les pages 
 | `.lien-evitement` | Position du lien « Aller au contenu » quand il reçoit le focus |
 | `.hero` | Photo de fond du hero de l'accueil |
 | Règles `:has()` des filtres | Masquer les destinations non sélectionnées (voir §8.5) |
+| `.form-floating > textarea.form-control` | Hauteur du champ Message (10rem) : dans un `form-floating`, Bootstrap ignore `rows` |
 
 ---
 
@@ -119,7 +120,7 @@ Règles :
 ## 5. Espacements et rythme des sections
 
 - Chaque section : `<section class="py-5 …">` + `<div class="container">`.
-- Entre les cartes d'une grille : `g-4`. Entre deux colonnes de mise en page : `g-5`.
+- Entre les cartes d'une grille : `g-4`. Entre deux colonnes de mise en page : `g-4 g-lg-5` (jamais `g-5` seul : sous 576 px, sa gouttière dépasse la marge du conteneur et crée un défilement horizontal).
 - Sous un titre de section : `mb-5`.
 - **Alternance des fonds** : après le bandeau ou le hero, les sections alternent `bg-white` puis `bg-body-tertiary`. On ne place jamais deux sections de même fond l'une après l'autre.
 - `bg-dark` est réservé à l'en-tête, au pied de page, aux bandeaux de titre et aux chiffres clés. Une section `bg-dark` n'est jamais placée juste avant le pied de page.
@@ -246,7 +247,7 @@ Listes de cartes : `row row-cols-*` + `g-4`, jamais de `width` fixe.
 | Destinations | `row-cols-1 row-cols-sm-2 row-cols-lg-3` |
 | Témoignages | `row-cols-1 row-cols-md-2` |
 | Chiffres clés | `row-cols-2 row-cols-md-4` |
-| Deux colonnes (texte + image, coordonnées + formulaire) | `row g-5` + `col-lg-7` / `col-lg-5` |
+| Deux colonnes (texte + image, coordonnées + formulaire) | `row g-4 g-lg-5` + `col-lg-7` / `col-lg-5` |
 
 ### 8.2 Boutons
 
@@ -416,7 +417,7 @@ Une liste de définitions : le lecteur d'écran lit « Voyages organisés : 5000
 | Conteneur | `card shadow-sm border-0 p-4` |
 | Texte, e-mail, téléphone | `form-floating` > `form-control` + `<label>` (le label vient **après** l'input, avec un `placeholder`) |
 | Liste déroulante | `form-floating` > `form-select` + `<label>` |
-| Message | `form-floating` > `<textarea class="form-control">` (hauteur fixée par `rows`) |
+| Message | `form-floating` > `<textarea class="form-control">` (hauteur de 10rem donnée par `style.css`, voir §1 : ne pas utiliser `rows`) |
 | Case à cocher | `form-check` > `form-check-input` + `form-check-label` |
 | Validation | `novalidate` + `needs-validation` sur le `<form>`, un `invalid-feedback` sous chaque champ obligatoire |
 | Message après envoi | `alert alert-success` ou `alert alert-danger` |
@@ -500,7 +501,7 @@ Chaque tableau donne l'ordre des sections, de haut en bas.
 | # | Section | Fond | Composants |
 |---|---|---|---|
 | 1 | Bandeau « À propos de nous » | `bg-dark` | §7.3 |
-| 2 | Notre histoire | `bg-white` | `row g-5 align-items-center` : texte `col-lg-7`, photo `col-lg-5` (`img-fluid rounded`) |
+| 2 | Notre histoire | `bg-white` | `row g-4 g-lg-5 align-items-center` : texte `col-lg-7`, photo `col-lg-5` (`img-fluid rounded`) |
 | 3 | Chiffres clés | `bg-dark` | §8.9 |
 | 4 | Nos valeurs | `bg-body-tertiary` | §8.3 × 3, grille `row-cols-md-3` |
 | 5 | Notre équipe | `bg-white` | §8.8 × 3, grille `row-cols-md-3` |
@@ -512,7 +513,7 @@ Les chiffres clés passent juste après « Notre histoire », pour ne pas placer
 | # | Section | Fond | Composants |
 |---|---|---|---|
 | 1 | Bandeau « Contactez-nous » | `bg-dark` | §7.3 |
-| 2 | Coordonnées + formulaire | `bg-body-tertiary` | `row g-5` : coordonnées `col-lg-5` (§8.10), formulaire `col-lg-7` (§8.11) |
+| 2 | Coordonnées + formulaire | `bg-body-tertiary` | `row g-4 g-lg-5` : coordonnées `col-lg-5` (§8.10), formulaire `col-lg-7` (§8.11) |
 
 ### Pages légales (à créer) — `mentions-legales.html`, `confidentialite.html`
 
