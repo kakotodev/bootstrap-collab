@@ -55,102 +55,141 @@
 
     <!-- Contenu principal -->
     <main id="contenu">
+        <!-- Bandeau de titre -->
+        <section class="bg-dark text-white text-center py-5" data-bs-theme="dark">
+            <div class="container">
+                <h1 class="display-5 fw-bold">Contactez-nous</h1>
+                <p class="lead text-body-secondary mb-0">Nous sommes là pour réaliser vos rêves de voyage</p>
+            </div>
+        </section>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Contactez-nous</h1>
-            <p class="page-subtitle">Nous sommes là pour réaliser vos rêves de voyage</p>
-        </div>
-    </section>
+        <!-- Coordonnées et formulaire -->
+        <section class="py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    <!-- Coordonnées -->
+                    <div class="col-lg-5">
+                        <h2 class="fw-bold mb-4">Nos coordonnées</h2>
+                        <address class="mb-0">
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex gap-3 mb-4">
+                                    <i class="bi bi-geo-alt fs-4 text-primary" aria-hidden="true"></i>
+                                    <div>
+                                        <h3 class="h6 mb-1">Adresse</h3>
+                                        <p class="mb-0">123 Rue des Voyages<br>75001 Paris, France</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex gap-3 mb-4">
+                                    <i class="bi bi-telephone fs-4 text-primary" aria-hidden="true"></i>
+                                    <div>
+                                        <h3 class="h6 mb-1">Téléphone</h3>
+                                        <a href="tel:+33123456789">01 23 45 67 89</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex gap-3 mb-4">
+                                    <i class="bi bi-envelope fs-4 text-primary" aria-hidden="true"></i>
+                                    <div>
+                                        <h3 class="h6 mb-1">E-mail</h3>
+                                        <a href="mailto:info@voyageaventure.fr">info@voyageaventure.fr</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex gap-3">
+                                    <i class="bi bi-clock fs-4 text-primary" aria-hidden="true"></i>
+                                    <div>
+                                        <h3 class="h6 mb-1">Horaires</h3>
+                                        <p class="mb-0">Lun–Ven&nbsp;: 9&nbsp;h – 18&nbsp;h<br>Sam&nbsp;: 10&nbsp;h – 16&nbsp;h</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
 
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Nos coordonnées</h2>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h3>Adresse</h3>
-                            <p>123 Rue des Voyages<br>75001 Paris, France</p>
+                    <!-- Formulaire -->
+                    <div class="col-lg-7">
+                        <div class="card shadow-sm border-0 p-4">
+                            <h2 class="h3 fw-bold mb-4">Envoyez-nous un message</h2>
+                            <!-- Envoi via Formspree : remplacer VOTRE_ID par l'identifiant du formulaire créé sur formspree.io -->
+                            <form class="needs-validation" action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="nom" name="nom"
+                                                placeholder="Jean Dupont" autocomplete="name" required>
+                                            <label for="nom">Nom complet</label>
+                                            <div class="invalid-feedback">Indiquez votre nom.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="nom@exemple.fr" autocomplete="email" required>
+                                            <label for="email">Adresse e-mail</label>
+                                            <div class="invalid-feedback">Indiquez une adresse e-mail valide.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="telephone" name="telephone"
+                                                placeholder="06 12 34 56 78" autocomplete="tel">
+                                            <label for="telephone">Téléphone (facultatif)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="destination" name="destination">
+                                                <option value="" selected>Pas encore décidé</option>
+                                                <option value="europe">Europe</option>
+                                                <option value="asie">Asie</option>
+                                                <option value="amerique">Amérique</option>
+                                                <option value="afrique">Afrique</option>
+                                                <option value="oceanie">Océanie</option>
+                                            </select>
+                                            <label for="destination">Destination souhaitée</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="budget" name="budget">
+                                                <option value="" selected>Non défini</option>
+                                                <option value="500-1000">500&nbsp;€ – 1&nbsp;000&nbsp;€</option>
+                                                <option value="1000-2000">1&nbsp;000&nbsp;€ – 2&nbsp;000&nbsp;€</option>
+                                                <option value="2000-3000">2&nbsp;000&nbsp;€ – 3&nbsp;000&nbsp;€</option>
+                                                <option value="3000+">Plus de 3&nbsp;000&nbsp;€</option>
+                                            </select>
+                                            <label for="budget">Budget approximatif par personne</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" name="message"
+                                                placeholder="Votre message" required></textarea>
+                                            <label for="message">Message</label>
+                                            <div class="invalid-feedback">Écrivez votre message.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Consentement marketing : FACULTATIF (RGPD) -->
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" value="oui">
+                                            <label class="form-check-label" for="newsletter">
+                                                Je souhaite recevoir vos offres de voyage par e-mail
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg">Envoyer le message</button>
+                                        <!-- Ajouter le lien vers confidentialite.html quand la page existera -->
+                                        <p class="form-text mt-3 mb-0">Vos données servent uniquement à répondre à votre
+                                            demande et ne sont jamais transmises à des tiers. Vous pouvez demander leur
+                                            suppression à tout moment à info@voyageaventure.fr.</p>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div class="contact-details">
-                            <h3>Téléphone</h3>
-                            <p>01 23 45 67 89</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>info@voyageaventure.fr</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div class="contact-details">
-                            <h3>Horaires</h3>
-                            <p>Lun-Ven: 9h-18h<br>Sam: 10h-16h</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <h2>Envoyez-nous un message</h2>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Adresse email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="destination">Destination souhaitée</label>
-                            <select id="destination" name="destination">
-                                <option value="">Choisissez une destination</option>
-                                <option value="europe">Europe</option>
-                                <option value="asie">Asie</option>
-                                <option value="amerique">Amérique</option>
-                                <option value="afrique">Afrique</option>
-                                <option value="oceanie">Océanie</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget approximatif</label>
-                            <select id="budget" name="budget">
-                                <option value="">Sélectionnez votre budget</option>
-                                <option value="500-1000">500€ - 1000€</option>
-                                <option value="1000-2000">1000€ - 2000€</option>
-                                <option value="2000-3000">2000€ - 3000€</option>
-                                <option value="3000+">Plus de 3000€</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" required>
-                                J'accepte de recevoir des informations sur vos offres
-                            </label>
-                        </div>
-                        <button type="submit" class="submit-button">Envoyer le message</button>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
     </main>
 
     <!-- Pied de page -->
@@ -206,6 +245,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- Validation du formulaire (script de la documentation Bootstrap) -->
+    <script>
+        document.querySelectorAll('.needs-validation').forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
 </body>
 
 </html>
