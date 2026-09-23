@@ -52,38 +52,9 @@
     outline-offset: 2px;
 }
 
-/* Hero section (accueil) */
+/* Hero (accueil) : photo de fond assombrie pour garder le texte blanc lisible */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 6rem 0;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.cta-button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #c0392b;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../img/hero.webp") center / cover;
 }
 
 /* Page headers */
@@ -435,16 +406,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .services-grid,
-    .testimonials-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -464,8 +425,6 @@
 /* Accessibilité : pas d'animations si l'utilisateur les a désactivées dans son système
    (les composants Bootstrap le gèrent déjà eux-mêmes) */
 @media (prefers-reduced-motion: reduce) {
-    .cta-button,
-    .service-card,
     .filter-btn,
     .destination-card,
     .destination-btn,
@@ -476,7 +435,6 @@
         transition: none;
     }
 
-    .service-card:hover,
     .destination-card:hover {
         transform: none;
     }
