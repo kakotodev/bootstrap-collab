@@ -63,6 +63,13 @@
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../img/hero.webp") center / cover;
 }
 
+/* Accessibilité : Bootstrap retire le contour de focus des flèches du carousel, on le remet.
+   Il est déclaré en blanc car carousel-dark inverse les couleurs des flèches : il s'affiche en noir. */
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible {
+    outline: 3px solid var(--bs-white);
+}
+
 /* Page headers */
 .page-header {
     background-color: #34495e;

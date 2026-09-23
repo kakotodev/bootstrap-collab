@@ -105,27 +105,51 @@
         </div>
     </section>
 
-    <!-- Témoignages : 1 par ligne sur mobile, 2 à partir de 768px -->
+    <!-- Témoignages : carousel Bootstrap, un avis à la fois, sans défilement automatique -->
     <section class="py-5 bg-body-tertiary">
         <div class="container">
             <h2 class="fw-bold text-center mb-5">Ils nous font confiance</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <figure class="card h-100 shadow-sm border-0 p-4 mb-0">
-                        <blockquote class="blockquote mb-3">
-                            <p>«&nbsp;Un voyage fantastique en Asie&nbsp;! L'équipe a été aux petits soins.&nbsp;»</p>
-                        </blockquote>
-                        <figcaption class="blockquote-footer text-body-secondary mb-0">Marie D., <cite>circuit Japon, avril 2025</cite></figcaption>
-                    </figure>
+            <!-- carousel-dark : flèches foncées, visibles sur le fond clair -->
+            <div id="carousel-temoignages" class="carousel slide carousel-dark">
+                <div class="carousel-inner">
+                    <!-- Témoignage 1 (affiché en premier grâce à "active") -->
+                    <div class="carousel-item active">
+                        <!-- Colonne centrée et étroite : le texte ne passe pas sous les flèches -->
+                        <div class="row justify-content-center py-2">
+                            <div class="col-8 col-lg-6">
+                                <figure class="card shadow-sm border-0 p-4 mb-0">
+                                    <blockquote class="blockquote mb-3">
+                                        <p>«&nbsp;Un voyage fantastique en Asie&nbsp;! L'équipe a été aux petits soins.&nbsp;»</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer text-body-secondary mb-0">Marie D., <cite>circuit Japon, avril 2025</cite></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Témoignage 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center py-2">
+                            <div class="col-8 col-lg-6">
+                                <figure class="card shadow-sm border-0 p-4 mb-0">
+                                    <blockquote class="blockquote mb-3">
+                                        <p>«&nbsp;Service impeccable, je recommande vivement&nbsp;!&nbsp;»</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer text-body-secondary mb-0">Pierre L., <cite>safari au Kenya, août 2025</cite></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <figure class="card h-100 shadow-sm border-0 p-4 mb-0">
-                        <blockquote class="blockquote mb-3">
-                            <p>«&nbsp;Service impeccable, je recommande vivement&nbsp;!&nbsp;»</p>
-                        </blockquote>
-                        <figcaption class="blockquote-footer text-body-secondary mb-0">Pierre L., <cite>safari au Kenya, août 2025</cite></figcaption>
-                    </figure>
-                </div>
+
+                <!-- Flèches précédent / suivant (texte masqué lu par les lecteurs d'écran) -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-temoignages" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Témoignage précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-temoignages" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Témoignage suivant</span>
+                </button>
             </div>
         </div>
     </section>
