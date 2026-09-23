@@ -52,38 +52,9 @@
     outline-offset: 2px;
 }
 
-/* Hero section (accueil) */
+/* Hero (accueil) : photo de fond assombrie pour garder le texte blanc lisible */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 6rem 0;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.cta-button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #c0392b;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../img/hero.webp") center / cover;
 }
 
 /* Page headers */
@@ -110,77 +81,6 @@
     font-size: 2.2rem;
     margin-bottom: 3rem;
     color: #2c3e50;
-}
-
-/* Services (accueil) */
-.services {
-    padding: 4rem 0;
-    background-color: white;
-}
-
-.services-grid {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    background-color: #f8f9fa;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    width: 300px;
-    border: 2px solid transparent;
-    transition: all 0.3s;
-}
-
-.service-card:hover {
-    border-color: #3498db;
-    transform: translateY(-5px);
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.service-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-/* Témoignages */
-.testimonials {
-    padding: 4rem 0;
-    background-color: #ecf0f1;
-}
-
-.testimonials-grid {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.testimonial-card {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 400px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.testimonial-author {
-    font-weight: bold;
-    color: #3498db;
 }
 
 /* Destinations */
@@ -518,16 +418,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .services-grid,
-    .testimonials-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -547,8 +437,6 @@
 /* Accessibilité : pas d'animations si l'utilisateur les a désactivées dans son système
    (les composants Bootstrap le gèrent déjà eux-mêmes) */
 @media (prefers-reduced-motion: reduce) {
-    .cta-button,
-    .service-card,
     .filter-btn,
     .destination-card,
     .destination-btn,
@@ -559,7 +447,6 @@
         transition: none;
     }
 
-    .service-card:hover,
     .destination-card:hover {
         transform: none;
     }
