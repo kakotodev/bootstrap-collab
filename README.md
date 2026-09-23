@@ -38,20 +38,22 @@ contact.html          Contact
 css/style.css         Thème Bootstrap et styles propres au site
 img/                  Images (favicon, photos)
 GUIDE-STYLE.md        Charte graphique et composants à utiliser
+docs/DOCUMENTATION.md Documentation technique : fonctionnement du code et procédures
 ```
 
 ## Contribuer
 
+- **Pour comprendre le fonctionnement du site ou réaliser une tâche courante** (ajouter une destination, une page, activer le formulaire…), consulter la [documentation technique](docs/DOCUMENTATION.md).
 - **Avant de construire ou de modifier une page, lire le [guide de style](GUIDE-STYLE.md).** Il définit les couleurs, la typographie, l'ordre des sections et les composants Bootstrap de chaque page, pour que toutes les pages restent coordonnées.
 - L'en-tête, le pied de page et le `<head>` sont communs aux 4 pages : toute modification de ces blocs doit être reportée sur toutes les pages.
 
 ## Avancement
 
 - [x] Socle commun : Bootstrap par CDN, barre de navigation avec menu burger, pied de page, thème, favicon, balises SEO
-- [ ] Accueil
+- [x] Accueil
 - [ ] Contact (formulaire fonctionnel et conforme au RGPD)
 - [x] Destinations (filtres, fiches détaillées)
-- [ ] À propos
+- [x] À propos (photos provisoires)
 - [ ] Pages Mentions légales et Politique de confidentialité
 - [ ] Vraies photos (hero, destinations, équipe)
 
